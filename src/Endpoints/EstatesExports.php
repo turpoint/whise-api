@@ -38,11 +38,11 @@ final class EstatesExports extends Endpoint
      *
      * @return CollectionResponse Traversable collection of items
      */
-    public function list(int $office_id, ?bool $show_representatives = null, ?bool $reset = null): CollectionResponse
+    public function list(int $office_id, ?bool $show_representatives = null, ?bool $reset = null, ?array $parameters = []): CollectionResponse
     {
-        $parameters = [
-            'OfficeId' => $office_id,
-        ];
+        if (!isset($parameters['OfficeId'])) {
+			$parameters['OfficeId'] = $office_id;
+		}
 
         if (!is_null($show_representatives)) {
             $parameters['ShowRepresentatives'] = $show_representatives;
