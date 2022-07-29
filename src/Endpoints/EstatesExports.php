@@ -43,6 +43,7 @@ final class EstatesExports extends Endpoint
         if (!isset($parameters['OfficeId'])) {
 			$parameters['OfficeId'] = $office_id;
 		}
+		
 
         if (!is_null($show_representatives)) {
             $parameters['ShowRepresentatives'] = $show_representatives;
