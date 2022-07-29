@@ -1,5 +1,5 @@
 {
-    "name": "fw4/whise-api",
+    "name": "turpoint/whise-api",
     "type": "library",
     "description": "PHP library for implementing the Whise API",
     "keywords": ["whise", "api", "sdk"],
